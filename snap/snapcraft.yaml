@@ -1,0 +1,33 @@
+name: jp2a
+adopt-info: jp2a
+summary: jp2a is a simple JPEG/PNG to ASCII converter.
+description: |
+  jp2a is a simple JPEG/PNG to ASCII converter. The source is available at 
+  https://github.com/Talinx/jp2a. This project used to be hosted on SourceForge.
+  
+  Copyright 2006-2016 Christian Stigen Larsen and 2020 Christoph Raitzig
+  Distributed under the GNU General Public License v2.
+
+license: GPL-2.0
+
+base: core20
+grade: stable 
+confinement: strict
+
+apps:
+  jp2a:
+    command: jp2a
+    environment:
+      LC_ALL: C.UTF-8
+    plugs:
+      - home
+
+parts: 
+  jp2a:
+    source: https://github.com/Talinx/jp2a
+    source-type: git
+    plugin: automake
+    
+    override-pull: |
+      snapcraftctl pull
+      snapcraftctl set-version "$(git describe --tags | sed 's/^v//' | cut -d "-" -f1)"  
