@@ -31,3 +31,15 @@ parts:
     override-pull: |
       snapcraftctl pull
       snapcraftctl set-version "$(git describe --tags | sed 's/^v//' | cut -d "-" -f1)"  
+    
+    build-packages:
+      - curl
+      - libjpeg-turbo8
+      - libpng16-16
+      - ncurses
+      
+    stage-packages:
+      - curl
+      - libjpeg-turbo8
+      - libpng16-16
+      - ncurses    
