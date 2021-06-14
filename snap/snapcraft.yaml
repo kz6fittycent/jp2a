@@ -42,4 +42,4 @@ parts:
       - curl
       - libjpeg-turbo8
       - libpng16-16
-      - ncurses    
+      - ncurses-bin    
