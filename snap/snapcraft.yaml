@@ -28,8 +28,8 @@ parts:
     source-type: git
     plugin: autotools
     autotools-configure-parameters:
-      - with-jpeg-prefix=/usr/local/
-      - enable-curl
+      - -with-jpeg-prefix=/usr/local/
+      - -enable-curl
     
     override-pull: |
       snapcraftctl pull
