@@ -40,9 +40,11 @@ parts:
       - libjpeg-turbo8
       - libpng16-16
       - ncurses-bin
+      - doxygen
       
     stage-packages:
       - curl
       - libjpeg-turbo8
       - libpng16-16
-      - ncurses-bin    
+      - ncurses-bin  
+      - doxygen
