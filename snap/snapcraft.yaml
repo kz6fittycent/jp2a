@@ -27,6 +27,9 @@ parts:
     source: https://github.com/Talinx/jp2a
     source-type: git
     plugin: autotools
+    configflags:
+      - with-jpeg-prefix=/usr/local/
+      - enable-curl
     
     override-pull: |
       snapcraftctl pull
